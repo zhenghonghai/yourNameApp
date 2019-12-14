@@ -13,6 +13,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -66,10 +67,12 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
         loginViewModel = null;
+//        Log.d("LoginActivity","什么时候执行销毁");
     }
 
     // 登录失败的操作
@@ -85,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         setResult(Activity.RESULT_OK);
         startActivity(intent);
-        finish();
+//        finish();
     }
 
     // 控件初始化
@@ -189,3 +192,4 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 }
+

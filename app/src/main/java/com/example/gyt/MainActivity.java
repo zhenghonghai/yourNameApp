@@ -11,6 +11,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -30,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
      * 4.   https://api.v6.chat/?url=
      * 5.   http://cn.bjbanshan.cn/jiexi.php?url=
      * 6.   http://jx.drgxj.com/?url=
+     * 7.   https://api.sigujx.com/?url=
+     * 8.   http://jiexi.071811.cc/jx.php?url=
+     * 9.
+     * 10.  http://jsap.attakids.com/?url=
      */
-    private final static String jx = "http://jx.drgxj.com/?url=";
+    private final static String jx = "http://jsap.attakids.com/?url=";
     private ProgressBar mProgressBar;
     private WebView mWebView;
     private Button mButton;
@@ -50,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
         init();
         setListeneries();
     }
+
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        Log.d("MainActivity","什么时候执行销毁");
+//    }
 
     /**
      * 键盘返回

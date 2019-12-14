@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="adUrls">
+
+
+<!--            穷二代             -->
 <!--        <item>js.letvcdn.com</item>-->
         <item>362prtn.ktionz.com</item>
 <!--        <item>jx.3dtou.cn</item>-->
