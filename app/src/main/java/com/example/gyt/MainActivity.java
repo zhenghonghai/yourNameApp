@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
      * 6.   http://jx.drgxj.com/?url=
      * 7.   https://api.sigujx.com/?url=
      * 8.   http://jiexi.071811.cc/jx.php?url=
-     * 9.
+     * 9.   http://jx.jqaaa.com/index.php?v=
      * 10.  http://jsap.attakids.com/?url=
      */
-    private final static String jx = "http://jsap.attakids.com/?url=";
+    private final static String jx = "http://api.3jx.top/vip/?url=";
     private ProgressBar mProgressBar;
     private WebView mWebView;
     private Button mButton;

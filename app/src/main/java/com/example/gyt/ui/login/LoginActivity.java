@@ -3,6 +3,7 @@ package com.example.gyt.ui.login;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -19,6 +20,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar mLoading;
     private LoginViewModel loginViewModel;
     private MyHandler myHandler;
+    private ConstraintLayout constraintLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory(this)).get(LoginViewModel.class);
         findViewById();
+        constraintLayout.getBackground().setAlpha(150);
         setListeneries();
         myHandler = new MyHandler();
         // 对登录校验进行观察
@@ -93,10 +97,12 @@ public class LoginActivity extends AppCompatActivity {
 
     // 控件初始化
     void findViewById() {
+        constraintLayout = findViewById(R.id.container);
         mUserName = findViewById(R.id.username);
         mPassword = findViewById(R.id.password);
         mLogin = findViewById(R.id.login);
         mLoading = findViewById(R.id.loading);
+
     }
     // 监听事件
     void setListeneries () {
